@@ -20,3 +20,8 @@ def rock_paper_scissor(p, c):
   # if scissor > paper = scissor (wins)
   # if paper > rock = paper (wins)
   # if paper < scissor = scissor (wins)
+  # {"Rock", "Paper", "Scissors"}
+  # input("What is your decision?")
+  # Computer vs. Player (us)
+  # randomgenerator
+  
