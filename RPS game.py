@@ -42,8 +42,8 @@ import random
     
 def game():
      while True:
-        user_input = input("Choose 'rock', 'paper', 'scissors', or 'quit': ")
-        if user_input not in ['rock', 'paper', 'scissors']:
+        user_input = input("Choose: 'rock', 'paper', 'scissors', or 'quit' ")
+        if user_input not in ['rock', 'paper', 'scissors', 'quit']:
             print("Please try again")
             continue
         computer_input = random.choice(['rock', 'paper', 'scissors'])
@@ -59,9 +59,8 @@ def game():
             print('You lose!')
 
         if user_input == 'quit':
-        # print("Thank you for playing!")
-            break
-        
+            ("Thank you for playing!")
+                    break
 game()
     
 
