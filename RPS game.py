@@ -36,9 +36,15 @@ def wins(player, opponent):
             return True
         return False
 
-def game():
-     while 
 
+    
+def game():
+     while True:
+         user_input = input("Choose 'rock', 'paper', or 'scissors': ")
+            if user_input not in ['rock', 'paper', 'scissors']:
+                print("Please try again")
+            continue
+         computer_input = random.choice(['rock', 'paper', 'scissors'])
 
     
 print(rock_paper_scissor())
