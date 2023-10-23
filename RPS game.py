@@ -42,7 +42,7 @@ import random
     
 def game():
      while True:
-        user_input = input("Choose: 'rock', 'paper', 'scissors', or 'quit' ")
+        user_input = input("Choose: 'rock', 'paper', 'scissors', or 'quit': ")
         if user_input not in ['rock', 'paper', 'scissors', 'quit']:
             print("Please try again")
             continue
@@ -55,12 +55,12 @@ def game():
             print('It is a tie!')
         elif (user_input == 'rock' and computer_input == 'scissors') or (user_input == 'scissors' and computer_input == 'paper') or (user_input == 'paper' and computer_input == 'rock'):
             print('You win!')
+        elif user_input == 'quit':
+            print('Thank you for playing!')
+            break
         else: 
             print('You lose!')
 
-        if user_input == 'quit':
-            ("Thank you for playing!")
-                    break
 game()
     
 
