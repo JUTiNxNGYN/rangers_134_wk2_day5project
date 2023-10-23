@@ -39,28 +39,27 @@
 # print(rock_paper_scissor())
 
 import random
-    
+
 def game():
      while True:
-        user_input = input("Choose: 'rock', 'paper', 'scissors', or 'quit': ")
+        user_input = input("Choose: 'rock', 'paper', 'scissors', or 'quit': \n")
         if user_input not in ['rock', 'paper', 'scissors', 'quit']:
             print("Please try again")
             continue
         computer_input = random.choice(['rock', 'paper', 'scissors'])
 
-        print(f"Player's choice: {user_input}")
         print(f"Computer's choice: {computer_input}")
 
         if user_input == computer_input:
-            print('It is a tie!')
+            print('It is a tie!\n')
         elif (user_input == 'rock' and computer_input == 'scissors') or (user_input == 'scissors' and computer_input == 'paper') or (user_input == 'paper' and computer_input == 'rock'):
-            print('You win!')
+            print('You win!\n')
         elif user_input == 'quit':
-            print('Thank you for playing!')
+            print('Thank you for playing!\n')
             break
-        else: 
-            print('You lose!')
+        else:
+            print('You lose!\n')
 
 game()
-    
+
 
