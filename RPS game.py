@@ -16,9 +16,10 @@
   # randomgenerator
 
 import random
+
 def rock_paper_scissor():
-    user = input("What is your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
-    computer = random.choice(['r','p','s'])
+    user = input("What is your choice? 'rock' for rock, 'paper' for paper, 'scissors' for scissors\n")
+    computer = random.choice(['rock','paper','scissors'])
 
     if user == computer:
         return 'It is a tie! You: {} Computer: {}.'.format(user,computer)
@@ -31,8 +32,13 @@ def rock_paper_scissor():
 def wins(player, opponent):
     # return true if player wins
     # r > s, s > p, p > r
-    if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
-        return True
-    return False
+        if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
+            return True
+        return False
+
+def game():
+     while 
+
+
     
 print(rock_paper_scissor())
