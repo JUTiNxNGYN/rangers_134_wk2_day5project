@@ -21,16 +21,18 @@ def rock_paper_scissor():
     computer = random.choice(['r','p','s'])
 
     if user == computer:
-        return 'It is a tie!'
-    else:
-        return 'You lose! Play again!'
+        return 'It is a tie! You: {} Computer: {}.'.format(user,computer)
+
+    # r > s, s > p, p > r
+    if wins(user, computer):
+        return "You won! You: {} Computer: {}".format(user, computer)
+    return "You lost! You: {} Computer: {}".format(user,computer)
     
 def wins(player, opponent):
     # return true if player wins
     # r > s, s > p, p > r
     if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
         return True
+    return False
     
 print(rock_paper_scissor())
-
-
