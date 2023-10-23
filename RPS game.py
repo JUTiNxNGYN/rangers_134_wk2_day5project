@@ -15,36 +15,53 @@
   # Computer vs. Player (us)
   # randomgenerator
 
-import random
+# import random
 
-def rock_paper_scissor():
-    user = input("What is your choice? 'rock' for rock, 'paper' for paper, 'scissors' for scissors\n")
-    computer = random.choice(['rock','paper','scissors'])
+# def rock_paper_scissor():
+#     user = input("What is your choice? 'rock' for rock, 'paper' for paper, 'scissors' for scissors\n")
+#     computer = random.choice(['rock','paper','scissors'])
 
-    if user == computer:
-        return 'It is a tie! You: {} Computer: {}.'.format(user,computer)
+#     if user == computer:
+#         return 'It is a tie! You: {} Computer: {}.'.format(user,computer)
 
-    # r > s, s > p, p > r
-    if wins(user, computer):
-        return "You won! You: {} Computer: {}".format(user, computer)
-    return "You lost! You: {} Computer: {}".format(user,computer)
+#     # r > s, s > p, p > r
+#     if wins(user, computer):
+#         return "You won! You: {} Computer: {}".format(user, computer)
+#     return "You lost! You: {} Computer: {}".format(user,computer)
     
-def wins(player, opponent):
-    # return true if player wins
-    # r > s, s > p, p > r
-        if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
-            return True
-        return False
+# def wins(player, opponent):
+#     # return true if player wins
+#     # r > s, s > p, p > r
+#         if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
+#             return True
+#         return False
 
+# print(rock_paper_scissor())
 
+import random
     
 def game():
      while True:
-         user_input = input("Choose 'rock', 'paper', or 'scissors': ")
-            if user_input not in ['rock', 'paper', 'scissors']:
-                print("Please try again")
+        user_input = input("Choose 'rock', 'paper', 'scissors', or 'quit': ")
+        if user_input not in ['rock', 'paper', 'scissors']:
+            print("Please try again")
             continue
-         computer_input = random.choice(['rock', 'paper', 'scissors'])
+        computer_input = random.choice(['rock', 'paper', 'scissors'])
 
+        print(f"Player's choice: {user_input}")
+        print(f"Computer's choice: {computer_input}")
+
+        if user_input == computer_input:
+            print('It is a tie!')
+        elif (user_input == 'rock' and computer_input == 'scissors') or (user_input == 'scissors' and computer_input == 'paper') or (user_input == 'paper' and computer_input == 'rock'):
+            print('You win!')
+        else: 
+            print('You lose!')
+
+        if user_input == 'quit':
+        # print("Thank you for playing!")
+            break
+        
+game()
     
-print(rock_paper_scissor())
+
